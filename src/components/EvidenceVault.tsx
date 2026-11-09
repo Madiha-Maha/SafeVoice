@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { EvidenceItem } from '../types';
-import { hashFile, verifyEvidenceIntegrity } from '../utils/crypto';
+import { hashFile, verifyEvidenceIntegrity, computeSHA256 } from '../utils/crypto';
 import { ShieldCheck, Upload, FileText, Music, Image as ImageIcon, CheckCircle, AlertCircle, Trash2, Key, Info } from 'lucide-react';
 
 interface EvidenceVaultProps {
@@ -107,7 +107,6 @@ export const EvidenceVault: React.FC<EvidenceVaultProps> = ({
       fakeContent = 'PDF_DOCUMENT_PAYLOAD_' + Date.now();
     }
 
-    const { computeSHA256 } = await import('../utils/crypto');
     const hash = await computeSHA256(fakeContent);
 
     const presetEvidence: EvidenceItem = {
