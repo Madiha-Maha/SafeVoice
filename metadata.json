@@ -1,0 +1,11 @@
+{
+  "name": "SafeVoice",
+  "description": "Privacy-first harassment reporting and safety platform for workplaces, universities, and travel with tamper-evident evidence vaults, fair committee workflow, and emergency protection.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+
